@@ -3,13 +3,13 @@ from fastapi import FastAPI
 import uvicorn
 
 from core.models.db_helper import db_helper
-
 from core.config import settings
 from api import router as api_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     #startup
+    
     yield
     #shutdown
     print("dispose engine")
